@@ -65,11 +65,14 @@ Click "Process Batch"
 
 Download results as CSV
 
-Example DNA Sequences
-text
-Donor site (exon-intron):   AAGGTAAGT
-Acceptor site (intron-exon): TTTTCCTAG
-Non-junction:                ATGCGTACGT
+Example:
+DNA Sequencestext
+- Donor site (exon-intron):   
+AAGGTAAGT
+- Acceptor site (intron-exon): 
+TTTTCCTAG
+- Non-junction:               
+ATGCGTACGT
 -----
 📊 Model Information
 The application uses a machine learning model trained on DNA sequences with the following characteristics:
