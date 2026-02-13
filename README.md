@@ -71,8 +71,8 @@ DNA Sequencestext
 AAGGTAAGT
 - Acceptor site (intron-exon): 
 TTTTCCTAG
-- Non-junction:               
-ATGCGTACGT
+- Non-junction:
+  ATGCGTACGT
 -----
 📊 Model Information
 The application uses a machine learning model trained on DNA sequences with the following characteristics:
