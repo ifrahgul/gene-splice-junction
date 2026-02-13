@@ -1,0 +1,26 @@
+# Virtual Environment
+venv/
+__pycache__/
+*.pyc
+
+# Model files
+*.pkl
+*.joblib
+*.h5
+
+# Data files
+*.csv
+*.xlsx
+*.xls
+
+# Environment
+.env
+config.yaml
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

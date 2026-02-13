@@ -1,0 +1,135 @@
+/* Custom styles for DNA Analyzer */
+
+:root {
+    --primary-color: #2E86AB;
+    --secondary-color: #A23B72;
+    --accent-color: #F18F01;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --dark-color: #2D3047;
+    --light-color: #f8f9fa;
+    --gray-color: #6c757d;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1C6B8C;
+}
+
+/* Sequence display */
+.sequence-viewer {
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: var(--dark-color);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 10px 0;
+}
+
+.base-a { color: #FF6B6B; }
+.base-c { color: #4ECDC4; }
+.base-g { color: #45B7D1; }
+.base-t { color: #96CEB4; }
+.base-n { color: #CCCCCC; }
+
+/* Feature highlights */
+.feature-donor {
+    background-color: rgba(241, 143, 1, 0.3);
+    border: 1px solid var(--accent-color);
+}
+
+.feature-acceptor {
+    background-color: rgba(199, 62, 29, 0.3);
+    border: 1px solid var(--danger-color);
+}
+
+.feature-exon {
+    background-color: rgba(46, 134, 171, 0.3);
+    border: 1px solid var(--primary-color);
+}
+
+.feature-intron {
+    background-color: rgba(162, 59, 114, 0.3);
+    border: 1px solid var(--secondary-color);
+}
+
+/* Loading animation */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.loading-pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Tooltip styling */
+.custom-tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted var(--gray-color);
+    cursor: help;
+}
+
+.custom-tooltip .tooltip-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: var(--dark-color);
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.custom-tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sequence-viewer {
+        font-size: 12px;
+    }
+    
+    .metric-card h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    .sequence-viewer {
+        page-break-inside: avoid;
+    }
+}
